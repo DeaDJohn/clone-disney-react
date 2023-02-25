@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import CardItem from "../../components/CardItem"
 import {getTrending} from "../../services/apiCalls"
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { register } from 'swiper/element/bundle';
+register();
 
 const Home = () => {
 
@@ -22,16 +22,17 @@ const Home = () => {
         <>
             <div className="cabecera">
                 <div className="container mx-auto">
-                    <Swiper
-                        spaceBetween={50}
-                        slidesPerView={1}
+                    <swiper-container
+                        space-between="50"
+                        slides-per-view="1"
+                        pagination="true" 
                     >
                         {trending.map(item => (
-                            <SwiperSlide>
+                            <swiper-slide>
                                 <CardItem key={item.key} item={item} />
-                            </SwiperSlide>
+                            </swiper-slide>
                         ))}
-                    </Swiper>
+                    </swiper-container>
                 </div>
             </div>
             <section>

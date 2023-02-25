@@ -10,7 +10,7 @@ import logoHome from './assets/i-home-nav.svg';
 import logoMovies from './assets/i-movies-nav.svg';
 import logoSeries from './assets/i-series-nav.svg';
 import Home from './pages/Home';
-import ListOfMovies from './pages/ListOfMovies';
+//import ListOfMovies from './pages/ListOfMovies';
 import SingleMovie from './pages/SingleMovies';
 import useMenuLink from './hooks/useMenuItem'
 
@@ -43,7 +43,7 @@ function App() {
                 <Users />
             </Route> */}
             <Route path="/" element={<Home />} />
-                <Route path="movies" element={<ListOfMovies />} />
+                <Route path="movies" element={<Home />} />
                 <Route path="movies/:id" element={<SingleMovie />}/>
         </Routes>
     </div>

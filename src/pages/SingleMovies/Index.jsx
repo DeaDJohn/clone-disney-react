@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import {getMovie, getMovieDetails} from "../../services/apiCalls"
 import {  useParams, Link } from 'react-router-dom';
 import Loading from "../../components/Loading"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { register } from 'swiper/element/bundle';
+register();
 
 const SingleMovie = () => {
     const { id } = useParams();
@@ -58,18 +58,17 @@ const SingleMovie = () => {
                                 </div>
                             </div>
                             <div className="section--content casts-section">
-                            <Swiper
-                                spaceBetween={50}
-                                slidesPerView={4}
-                                onSlideChange={() => console.log('slide change')}
-                                onSwiper={(swiper) => console.log(swiper)}
-                                >
+                            <swiper-container
+                                space-between="50"
+                                slides-per-view="4"
+                                pagination="false" 
+                            >
                                         { console.log(movieCredits.cast) }
                                         {
                                             movieCredits.cast.map( acts => 
                                                 (
-                                                    <SwiperSlide>
-                                                        <div key={acts.credit_id} className='cardItem acts relative swiper-slide'>
+                                                    <swiper-slide key={acts.credit_id}>
+                                                        <div  className='cardItem acts relative swiper-slide'>
                                                             <Link to={`/movies/${acts.credit_id}`} className="cardItem--wrapper">
                                                                 <div className="image-container">
                                                                     <div>
@@ -81,11 +80,11 @@ const SingleMovie = () => {
                                                                 </div>
                                                             </Link>
                                                         </div>
-                                                    </SwiperSlide>
+                                                    </swiper-slide>
                                                 )
                                             )
                                         }
-                                 </Swiper>
+                                 </swiper-container>
                             </div>
                         </div>
                     </section>

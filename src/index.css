@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --swiper-pagination-bullet-inactive-color: #FFFFFF;
+    --swiper-pagination-color: #FFFFFF;
+}
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -49,7 +53,9 @@ body{
     height: 20px;
     fill: rgb(249, 249, 249);
 }
-
+.cabecera .swiper-pagination{
+    text-align: right;
+}
 .categoryBtn{
     margin: 20px 0px 0px 20px;
     flex: 0 0 auto;
