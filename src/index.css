@@ -22,7 +22,14 @@ body{
     user-select: none;
     color: #fff;
 }
-
+#webAppHeader{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 #webAppHeader nav{
   background-color: transparent;
 }
@@ -60,6 +67,9 @@ body{
     margin: 20px 0px 0px 20px;
     flex: 0 0 auto;
     width: calc(16.6667% - 20px);
+}
+.categoryBtn:first-child{
+    margin-left: 0;
 }
 .categoryBtn:hover video{
     opacity: 1;
