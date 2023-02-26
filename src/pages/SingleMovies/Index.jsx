@@ -4,6 +4,7 @@ import {  useParams, Link } from 'react-router-dom';
 import Loading from "../../components/Loading";
 import { register } from 'swiper/element/bundle';
 import CardItem from "../../components/CardItem";
+import ActItem from "../../components/ActItem";
 register();
 
 const SingleMovie = () => {
@@ -68,21 +69,10 @@ const SingleMovie = () => {
                             >
                                         { console.log(movieCredits.cast) }
                                         {
-                                            movieCredits?.cast?.map( acts => 
+                                            movieCredits?.cast?.map( act => 
                                                 (
-                                                    <swiper-slide key={acts.credit_id}>
-                                                        <div  className='cardItem acts relative swiper-slide'>
-                                                            <Link to={`/movies/${acts.credit_id}`} className="cardItem--wrapper">
-                                                                <div className="image-container">
-                                                                    <div>
-                                                                        <img src={`https://image.tmdb.org/t/p/original/${acts.profile_path}`} alt={acts.name} />
-                                                                    </div>
-                                                                    <div className="absolute w-100 h-100 flex align-bottom justify-start">
-                                                                        { acts.name }
-                                                                    </div>
-                                                                </div>
-                                                            </Link>
-                                                        </div>
+                                                    <swiper-slide key={act.credit_id}>
+                                                        <ActItem act={act} />
                                                     </swiper-slide>
                                                 )
                                             )

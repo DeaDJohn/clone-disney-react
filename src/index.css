@@ -165,6 +165,31 @@ body{
 .cardItem a:hover:after{
     border: 4px solid rgba(249, 249, 249, 0.8);
 }
+.cardItem--hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.cardItem--hover .cardItem--title{
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all .3s .3s ease;
+}
+.cardItem a:hover .cardItem--hover{
+    opacity: 1;
+}
+.cardItem a:hover .cardItem--hover .cardItem--title{
+    opacity: 1;
+    transform: translateY(0%);
+}
 .singleDetail{
     position: relative;
 }
