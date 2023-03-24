@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import ListOfMovies from './pages/ListOfMovies/Index';
 import SingleMovie from './pages/SingleMovies/Index';
 import useMenuLink from './hooks/useMenuItem'
+import SingleArtist from './pages/SingleArtist/Index';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route path="/" element={<Home />} />
                 <Route path="movies" element={<ListOfMovies />} />
                 <Route path="movies/:id" element={<SingleMovie />}/>
+                <Route path="artist/:id" element={<SingleArtist />}/>
         </Routes>
     </div>
     </BrowserRouter>

@@ -41,12 +41,12 @@ const SingleMovie = () => {
             <Loading /> : 
             (
                 <div className="singleDetail">
-                    <div className="singleDetail--header h-screen flex align-bottom">
+                    <div className="singleDetail--header min-h-screen flex align-bottom relative">
                         <div className="singleDetail--header-bg">
-                            <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+                            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} />
                             <div className="singleDetail--header-cover"></div>
                         </div>
-                        <div className="singleDetail--header-info mt-auto relative w-screen py-10">
+                        <div className="singleDetail--header-info mt-auto relative w-screen py-10 pt-24">
                             <div className="container mx-auto">
                                 <div className="singleDetail--title font-bold text-5xl mb-5">{movie.title}</div>
                                 <div className="singleDetail--text lg:w-2/3">{movie.overview}</div>
