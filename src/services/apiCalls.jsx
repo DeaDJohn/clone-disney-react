@@ -50,3 +50,16 @@ export const getPersonMovie = async ({id}) => {
     console.log( data );
     return data;
 }
+export const getVideoMovie = async ({id}) => {
+    const response = await fetch(`${API_URL}movie/${id}/videos?api_key=${API_KEY}&language=es-ES`);
+    const data = await response.json();
+    console.log( data );
+    return data;
+}
+export const getExternaIDlMovie = async ({id}) => {
+    const response = await fetch(`${API_URL}movie/${id}/external_ids?api_key=${API_KEY}&language=es-ES`);
+    const data = await response.json();
+    console.log( data );
+    return data;
+}
+

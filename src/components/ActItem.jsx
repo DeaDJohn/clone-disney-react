@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 const ActItem = ({act}) => {
-    console.log(act);
+    //console.log(act);
   return (
     <div  className='cardItem acts relative swiper-slide'>
         <Link to={`/artist/${act.id}`} className="cardItem--wrapper">

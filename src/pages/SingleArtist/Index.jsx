@@ -54,7 +54,6 @@ function Index() {
                                         <div className="singleDetail--text">{person.biography}</div>
                                     </div>
                                     <div className="lg:w-1/3">
-
                                         <figure className="w-52 pl-7 rounded overflow-hidden">
                                             <img src={`https://image.tmdb.org/t/p/original${person.profile_path}`} alt={person.name} />
                                         </figure>
